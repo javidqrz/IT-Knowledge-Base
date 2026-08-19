@@ -85,7 +85,7 @@ Win + R
 
 dsa.msc
 
-
+```
 ## Schritt 2
 
 Das betroffene Benutzerkonto suchen.
@@ -95,7 +95,7 @@ Beispiel:
 ```text
 
 <DOMAIN>\<username-adm>
-
+```
 ## Schritt 3
 
 Eigenschaften des Benutzers öffnen.
@@ -111,7 +111,7 @@ Option aktivieren:
 ```text
 
 ☑ Konto entsperren
-
+```
 ## Schritt 6
 
 Auf **Übernehmen** und anschließend auf **OK** klicken.
@@ -135,7 +135,7 @@ Nach der Entsperrung prüfen:
 4740 - A user account was locked out
 
 Diese Event-ID hilft dabei, den Computer zu identifizieren, der die Kontosperrung verursacht hat.
-
+```
 # 6. Was habe ich gelernt?
 
 - Active Directory verwaltet Benutzerkonten und Berechtigungen.
