@@ -49,3 +49,11 @@ Weitere Dokumentationen folgen.
 - NTFS Berechtigungen
 
 - GPO Grundlagen
+
+## Autor
+
+Ahmad Javid Qarizadah
+
+Bachelor of Computer Science
+
+Auszubildender Fachinformatiker für Systemintegration
