@@ -8,10 +8,7 @@
 
 - Windows 10/11 Clients
 
- 
 ## Kategorie
-
- 
 
 Identity Management / Active Directory / Troubleshooting
 
@@ -69,7 +66,7 @@ Beispiel:
 .\Administrator
 
 Der Ausdruck `.\` bedeutet, dass Windows das lokale Benutzerkonto des Computers verwendet.
-
+```
 ## Option 3: Automatische Entsperrung abwarten
 
 Wenn eine Kontosperrdauer (Account Lockout Policy) konfiguriert wurde, wird das Benutzerkonto nach Ablauf der festgelegten Zeit automatisch entsperrt.
