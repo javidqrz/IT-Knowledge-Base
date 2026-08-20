@@ -101,7 +101,7 @@ Nach folgenden Regeln suchen:
 Netzwerkdiagnose (ICMP)
 
 ```
-## Regeln aktivieren
+## ICMP Regeln aktivieren
 
 Alle benötigten ICMP-Regeln aktivieren.
 
@@ -123,6 +123,10 @@ oder
 ping <IP-Adresse>
 
 ```
+## Übersicht der Lösung
+
+k0004-firewall-icmp.png
+
 
 # Kontrolle nach der Lösung
 
