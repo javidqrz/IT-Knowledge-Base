@@ -125,7 +125,7 @@ ping <IP-Adresse>
 ```
 ## Übersicht der Lösung
 
-![Firewall%20Firewall-ICMP.png
+KB0004%20-%20Firewall-ICMP.png
 
 # Kontrolle nach der Lösung
 
