@@ -67,7 +67,6 @@ Win + R
 Danach eingeben:
 
 ```text
-70
 firewall.cpl
 
 ```
