@@ -138,7 +138,7 @@ Beispiel:
 
 ```text
 
-Antwort von 192.168.x.x
+Antwort von 10.0.x.x
 
 ```
 # Was habe ich gelernt?
