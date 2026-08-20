@@ -67,6 +67,7 @@ Win + R
 Danach eingeben:
 
 ```text
+
 firewall.cpl
 
 ```
@@ -96,7 +97,7 @@ Eingehende Regeln
 Nach folgenden Regeln suchen:
 
 ```text
-102
+
 Netzwerkdiagnose (ICMP)
 
 ```
@@ -114,8 +115,6 @@ Auf dem Client erneut ausführen:
 ping <Servername>
 
 ```
-
- 
 
 oder
 
