@@ -126,7 +126,8 @@ ping <IP-Adresse>
 ## Übersicht der Lösung
 
 
-![Firewall ICMP](../Screenshots/ICMP.png
+
+![Firewall ICMP](../Screenshots/KB00004-Firewall-ICMP.png
 
 
 
