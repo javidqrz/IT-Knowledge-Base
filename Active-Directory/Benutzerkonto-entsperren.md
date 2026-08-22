@@ -109,7 +109,6 @@ Zum Reiter **Konto** wechseln.
 Option aktivieren:
 
 ```text
-
 ☑ Konto entsperren
 ```
 ## Schritt 6
