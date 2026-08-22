@@ -1,4 +1,6 @@
-# KB00003 – Tastaturausfall nach VMware-Deinstallation beheben
+# KB00003 – Windows-Tastatur reagiert nach VMware-Deinstallation nicht
+
+Weitere Zeilen anzeigen
 
 ## Betroffene Systeme
 
