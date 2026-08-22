@@ -46,6 +46,25 @@ Beim Systemstart versucht Windows weiterhin den nicht mehr vorhandenen VMware-Tr
 
 Dadurch wird der Eingabestapel der Tastatur blockiert. 【1-ff3f06】
 
+
+## Temporären Zugriff ermöglichen
+
+Da die integrierte Tastatur nach dem Neustart nicht mehr funktionierte, war eine normale Kennworteingabe nicht möglich.
+
+Um sich trotzdem am System anzumelden, wurde die Windows-Bildschirmtastatur (OSK) verwendet.
+
+Vorgehensweise:
+
+- Am Anmeldebildschirm auf „Barrierefreiheit“ klicken
+  
+- Bildschirmtastatur (OSK) aktivieren
+
+- Kennwort über die Bildschirmtastatur eingeben
+
+- Anmeldung durchführen
+
+Dadurch konnte auf das System zugegriffen und die weitere Fehleranalyse durchgeführt werden.
+
 ## Betroffener Registry-Pfad
 
 ```text
