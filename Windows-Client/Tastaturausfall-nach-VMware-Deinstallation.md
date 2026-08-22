@@ -20,21 +20,17 @@ Windows Client / Troubleshooting / VMware
 
 # Problembeschreibung
 
-Nach der Deinstallation von VMware Workstation und einem anschließenden Neustart funktionierte die integrierte Tastatur des Laptops nicht mehr.
-
-Eine Kennworteingabe am Anmeldebildschirm war nicht möglich.
-
-Auch externe USB-Tastaturen konnten durch die Treiberproblematik beeinträchtigt werden. 【1-ff3f06】
+Nach der Deinstallation von VMware Workstation und einem anschließenden Neustart funktionierten weder die integrierte Laptop-Tastatur noch eine externe USB-Tastatur. Dadurch war eine Anmeldung am System nicht mehr möglich.
 
 ## Fehlersymptome
 
-- Tastatur reagiert nicht
+- Integrierte Laptop-Tastatur reagiert nicht
+
+- Externe USB-Tastatur reagiert nicht
 
 - Anmeldung am System nicht möglich
 
 - Keine Kennworteingabe möglich
-
-- Eingabegeräte funktionieren nicht korrekt
 
 # Ursache des Problems
 
@@ -44,19 +40,16 @@ Nach der Deinstallation wurde die Treiberdatei entfernt, der Registry-Eintrag bl
 
 Beim Systemstart versucht Windows weiterhin den nicht mehr vorhandenen VMware-Treiber zu laden.
 
-Dadurch wird der Eingabestapel der Tastatur blockiert. 【1-ff3f06】
-
+Dadurch wird der Eingabestapel der Tastatur blockiert. 
 
 ## Temporären Zugriff ermöglichen
 
-Da die integrierte Tastatur nach dem Neustart nicht mehr funktionierte, war eine normale Kennworteingabe nicht möglich.
-
-Um sich trotzdem am System anzumelden, wurde die Windows-Bildschirmtastatur (OSK) verwendet.
+Da keine Tastatureingabe möglich war, wurde die Windows-Bildschirmtastatur (OSK) als Notfalllösung verwendet.
 
 Vorgehensweise:
 
 - Am Anmeldebildschirm auf „Barrierefreiheit“ klicken
-  
+
 - Bildschirmtastatur (OSK) aktivieren
 
 - Kennwort über die Bildschirmtastatur eingeben
@@ -64,6 +57,7 @@ Vorgehensweise:
 - Anmeldung durchführen
 
 Dadurch konnte auf das System zugegriffen und die weitere Fehleranalyse durchgeführt werden.
+Weitere Zeilen anzeigen
 
 ## Betroffener Registry-Pfad
 
