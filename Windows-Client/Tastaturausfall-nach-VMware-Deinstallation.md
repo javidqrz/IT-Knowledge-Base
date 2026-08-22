@@ -2,9 +2,7 @@
 
 ## Betroffene Systeme
 
-- Windows 11 Pro
-
-- Windows 11 Enterprise
+- Windows 11 Pro / Windows 11 Enterprise
 
 - VMware Workstation
 
