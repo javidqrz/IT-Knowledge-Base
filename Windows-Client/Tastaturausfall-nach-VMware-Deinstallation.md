@@ -42,20 +42,6 @@ Beim Systemstart versucht Windows weiterhin den nicht mehr vorhandenen VMware-Tr
 
 Dadurch wird der Eingabestapel der Tastatur blockiert. 
 
-## Betroffener Registry-Pfad
-
-```text
-
-HKEY_LOCAL_MACHINE
-
-└─ SYSTEM
-└─ CurrentControlSet
-└─ Control
-└─ Class
-└─ {4d36e96b-e325-11ce-bfc1-08002be10318}
-
-```
-
 # Voraussetzungen für die Lösung
 
 Benötigt werden:
@@ -94,7 +80,13 @@ Zum folgenden Schlüssel navigieren:
 
 ```text
 
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e96b-e325-11ce-bfc1-08002be10318}
+HKEY_LOCAL_MACHINE
+
+└─ SYSTEM
+└─ CurrentControlSet
+└─ Control
+└─ Class
+└─ {4d36e96b-e325-11ce-bfc1-08002be10318}
 
 ```
 
