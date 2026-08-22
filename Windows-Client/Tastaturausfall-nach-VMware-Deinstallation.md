@@ -57,7 +57,6 @@ Vorgehensweise:
 - Anmeldung durchführen
 
 Dadurch konnte auf das System zugegriffen und die weitere Fehleranalyse durchgeführt werden.
-Weitere Zeilen anzeigen
 
 ## Betroffener Registry-Pfad
 
