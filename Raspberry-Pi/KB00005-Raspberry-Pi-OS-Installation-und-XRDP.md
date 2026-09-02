@@ -94,7 +94,7 @@ Den Schreibvorgang starten und vollständig abschließen lassen.
 > Hier den Screenshot der Installation einfügen.
 
 ```markdown
-![Raspberry Pi Installation](../Screenshots/Raspberry_Pi_)
+![Firewall ICMP](../Screenshots/Raspberry_Pi_Installation.png)
 ```
 
 ---
