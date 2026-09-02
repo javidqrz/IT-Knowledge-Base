@@ -1,0 +1,137 @@
+TECHNISCHE ARBEITSANWEISUNG
+Installation und Einrichtung eines Raspberry Pi mit XRDP
+Betriebssystem, Benutzerverwaltung, Updates und Remotezugriff
+
+Dokumenttyp	Installations- und Prüfdokumentation
+Zielsystem	Raspberry Pi mit Raspberry Pi OS
+Remotezugriff	XRDP / Microsoft Remotedesktopverbindung
+Bearbeitungsstatus	Installation und Funktionstest abgeschlossen
+
+
+ 
+1. Ziel
+Ziel dieser Dokumentation ist die Installation und Einrichtung eines Raspberry Pi. Dazu gehören das Schreiben des Betriebssystems auf eine microSD-Karte, die Inbetriebnahme, die Systemaktualisierung, die Benutzerverwaltung sowie die Installation und der Funktionstest von XRDP. Es wurden keine besonderen XRDP-Konfigurationsänderungen vorgenommen.
+2. Benötigte Hardware und Software
+2.1 Hardware
+•	Raspberry Pi
+•	microSD-Karte
+•	Passendes Netzteil
+•	LAN-Kabel
+•	Monitor
+•	Micro-HDM Kabel
+•	USB-Tastatur und USB-Maus
+•	Windows-Computer mit Kartenleser
+2.2 Software
+•	Raspberry Pi Imager
+•	Raspberry Pi OS
+•	XRDP
+•	Microsoft Remotedesktopverbindung (mstsc)
+3. Raspberry Pi OS auf die microSD-Karte schreiben
+1.	microSD-Karte in den Kartenleser des Windows-Computers einsetzen.
+2.	Raspberry Pi Imager öffnen.
+3.	Das passende Raspberry-Pi-Modell auswählen.
+4.	Raspberry Pi OS auswählen.
+5.	Die richtige microSD-Karte als Speicher auswählen.
+6.	In den Einstellungen Hostname, Benutzername, Kennwort, Zeitzone und Tastaturlayout festlegen. 
+7.	Den Schreibvorgang starten und die Überprüfung vollständig abschließen lassen.
+8.	Die microSD-Karte sicher aus Windows entfernen.
+Achtung
+Beim Schreiben des Images werden vorhandene Daten auf der ausgewählten microSD-Karte gelöscht. Vorher prüfen, ob die richtige Karte ausgewählt wurde.
+ 
+4. Raspberry Pi anschließen und starten
+9.	Beschriebene microSD-Karte in den Raspberry Pi einsetzen.
+10.	Monitor über Micro-HDMI anschließen.
+11.	Tastatur und Maus über USB anschließen.
+12.	LAN-Kabel mit einem freigegebenen Netzwerkanschluss verbinden.
+13.	Netzteil zuletzt anschließen. Der Raspberry Pi startet automatisch.
+14.	Die erste Anmeldung beziehungsweise den Einrichtungsassistenten abschließen.
+5. Geräte- und Systeminformationen prüfen
+5.1 Modell anzeigen
+tr -d '\0' < /proc/device-tree/model
+5.2 Hostname anzeigen
+hostname
+5.3 IP-Adresse anzeigen
+hostname -I
+6. System aktualisieren
+Paketinformationen aktualisieren:
+sudo apt update
+Installierte Pakete aktualisieren:
+sudo apt upgrade -y
+Anschließend das System neu starten:
+sudo reboot
+7. Benutzerverwaltung
+7.1 Neuen Benutzer erstellen
+Dieser Schritt ist nur erforderlich, wenn der gewünschte Benutzer noch nicht existiert:
+sudo adduser <benutzername>
+Beispiel:
+sudo adduser raspi
+7.2 Benutzer zur Administratorgruppe hinzufügen
+sudo usermod -aG sudo <benutzername>
+Beispiel:
+sudo usermod -aG sudo raspi
+Gruppenmitgliedschaft prüfen:
+groups raspi
+7.3 Kennwort ändern
+Kennwort des eigenen Kontos ändern:
+sudo passwd <benutzername>
+Beispiel:
+sudo passwd raspi
+7.4 Benutzer wechseln
+su - pi
+Aktuellen Benutzer prüfen:
+whoami
+8. Automatische Anmeldung aktivieren
+Die automatische Desktop-Anmeldung kann über das Konfigurationsmenü des Raspberry Pi eingestellt werden:
+sudo raspi-config
+Menüpfad:
+System Options
+Boot / Auto Login
+Desktop Autologin
+Danach neu starten:
+sudo reboot
+9. XRDP installieren
+XRDP wurde mit dem folgenden Befehl installiert:
+sudo apt install xrdp -y
+10. XRDP-Dienste prüfen
+sudo systemctl status xrdp
+sudo systemctl status xrdp-sesman
+Die Dienste sollten als active (running) angezeigt werden. Die Statusanzeige kann mit der Taste q beendet werden.
+11. Remote-Desktop-Verbindung testen
+15.	Auf dem Windows-Computer Win + R drücken.
+16.	mstsc eingeben und mit Enter bestätigen.
+17.	IP-Adresse des Raspberry Pi im Feld Computer eintragen.
+18.	Verbindung herstellen.
+19.	Mit dem vorhandenen Linux-Benutzernamen und Kennwort anmelden.
+20.	Prüfen, ob die grafische Oberfläche angezeigt und bedient werden kann.
+12. Fehlerbehebung: „login failed for display 0“
+Bei einem Gerät erschien während der Anmeldung die Meldung:
+login failed for display 0
+Für die Analyse wurden zuerst die Dienste und Protokolle geprüft:
+sudo systemctl status xrdp
+sudo systemctl status xrdp-sesman
+sudo tail -50 /var/log/xrdp.log
+sudo tail -50 /var/log/xrdp-sesman.log
+Die Datei .Xauthority wurde gesichert beziehungsweise umbenannt, damit sie bei der nächsten Sitzung neu erzeugt werden konnte:
+mv ~/.Xauthority ~/.Xauthority.old
+Danach wurden XRDP und das System neu gestartet:
+sudo systemctl restart xrdp
+sudo reboot
+Die Remote-Anmeldung wurde anschließend erneut getestet und nach mehreren Neustarts erfolgreich bestätigt.
+13. Funktionstest
+Prüfschritt	Erwartetes Ergebnis	Status
+Systemstart	Raspberry Pi OS startet ordnungsgemäß	Erfolgreich
+Netzwerk	IP-Adresse ist vorhanden	Erfolgreich
+Updates	System wurde aktualisiert	Erfolgreich
+Benutzerkonto	Anmeldung funktioniert	Erfolgreich
+XRDP-Dienst	Dienst ist aktiv	Erfolgreich
+Remote Desktop	RDP-Anmeldung funktioniert	Erfolgreich
+Neustarttest	RDP funktioniert nach Neustart	Erfolgreich
+14. Ergebnis
+•	Raspberry Pi OS erfolgreich auf die microSD-Karte geschrieben und gestartet.
+•	Geräte- und Systeminformationen geprüft.
+•	System aktualisiert.
+•	Benutzerkonto erstellt beziehungsweise geprüft und Kennwort verwaltet.
+•	Automatische Anmeldung bei Bedarf eingerichtet.
+•	XRDP installiert.
+•	Remote-Desktop-Verbindung erfolgreich getestet.
+•	Fehler „login failed for display 0“ analysiert und behoben.
