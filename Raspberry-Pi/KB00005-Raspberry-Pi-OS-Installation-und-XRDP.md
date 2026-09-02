@@ -124,7 +124,6 @@ tr -d '\0' < /proc/device-tree/model; echo
 ```bash
 hostname
 ```
-
 ### IP-Adresse anzeigen
 
 ```bash
