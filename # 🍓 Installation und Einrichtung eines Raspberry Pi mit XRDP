@@ -1,1 +1,78 @@
+# 🍓 Installation und Einrichtung eines Raspberry Pi mit XRDP
 
+## Dokumentinformationen
+
+- **Dokumenttyp:** Installations- und Prüfdokumentation
+- **Zielsystem:** Raspberry Pi mit Raspberry Pi OS
+- **Remotezugriff:** XRDP / Microsoft Remotedesktopverbindung
+- **Bearbeitungsstatus:** Installation und Funktionstest abgeschlossen
+
+---
+
+# 1. Ziel
+
+Ziel dieser Dokumentation ist die Installation und Einrichtung eines Raspberry Pi.
+
+Dazu gehören:
+
+- Schreiben des Betriebssystems auf die microSD-Karte
+- Inbetriebnahme des Raspberry Pi
+- Systemaktualisierung
+- Benutzerverwaltung
+- Installation und Konfiguration von XRDP
+- Durchführung eines Funktionstests
+
+---
+
+# 2. Benötigte Hardware und Software
+
+## 2.1 Hardware
+
+- Raspberry Pi
+- microSD-Karte
+- Passendes Netzteil
+- LAN-Kabel
+- Monitor
+- Micro-HDMI-Kabel
+- USB-Tastatur und USB-Maus
+- Windows-PC mit Kartenleser
+
+## 2.2 Software
+
+- Raspberry Pi Imager
+- Raspberry Pi OS
+- XRDP
+- Microsoft Remotedesktopverbindung (mstsc)
+
+---
+
+# 3. Raspberry Pi OS auf die microSD-Karte schreiben
+
+1. microSD-Karte in den Kartenleser einsetzen.
+2. Raspberry Pi Imager öffnen.
+3. Raspberry-Pi-Modell auswählen.
+4. Raspberry Pi OS auswählen.
+5. Speicherkarte auswählen.
+6. Erweiterte Einstellungen öffnen.
+7. Hostname, Benutzername und Passwort konfigurieren.
+8. SSH aktivieren.
+9. Betriebssystem auf die Karte schreiben.
+
+---
+
+# 4. Erstinstallation
+
+1. microSD-Karte einsetzen.
+2. Raspberry Pi mit Stromversorgung verbinden.
+3. Monitor, Tastatur und LAN-Kabel anschließen.
+4. Raspberry Pi starten.
+5. Erstkonfiguration durchführen.
+
+---
+
+# 5. Systeminformationen ermitteln
+
+## Modell anzeigen
+
+```bash
+cat /proc/device-tree/model
