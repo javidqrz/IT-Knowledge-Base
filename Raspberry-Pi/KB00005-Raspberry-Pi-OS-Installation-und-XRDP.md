@@ -95,7 +95,7 @@ Den Schreibvorgang starten und vollständig abschließen lassen.
 
 ```markdown
 ![Raspberry Pi Installation](../Screenshots/Raspberry_Pi_Installation.png)
-``
+```
 
 ---
 
