@@ -94,7 +94,7 @@ Den Schreibvorgang starten und vollständig abschließen lassen.
 > Hier den Screenshot der Installation einfügen.
 
 ```markdown
-../Screenshots/Raspberry Pi Installation.png
+../Screenshots/Raspberry_Pi_Installation.png
 ```
 
 ---
