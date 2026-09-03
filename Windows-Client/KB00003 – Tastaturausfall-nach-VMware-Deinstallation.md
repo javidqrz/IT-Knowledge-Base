@@ -100,6 +100,8 @@ UpperFilters
 
 öffnen.
 
+![Registrierungseditor](../Registrierungseditor.png)
+
 ---
 
 ## VMware-Eintrag entfernen
