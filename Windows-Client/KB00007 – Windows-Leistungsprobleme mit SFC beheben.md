@@ -1,4 +1,4 @@
-# KB00007 – Windows-Systemdateien mit SFC reparieren
+# KB00009 - Windows-Systemdateien mit SFC reparieren
 
 ## Betroffene Systeme
 
@@ -7,7 +7,7 @@
 
 ## Kategorie
 
-Windows / Troubleshooting / System Repair
+Windows / System Repair / Troubleshooting
 
 ## Zielgruppe
 
@@ -19,16 +19,15 @@ Windows / Troubleshooting / System Repair
 
 # 1. Problembeschreibung
 
-Das Windows-System reagierte ungewöhnlich langsam.
+Das Windows-System reagierte ungewöhnlich langsam und zeigte zeitweise ein instabiles Verhalten.
 
-Zusätzlich traten folgende Probleme auf:
+Folgende Symptome wurden festgestellt:
 
-- Anwendungen und Systemfenster wurden teilweise nur verzögert geöffnet.
-- Anwendungen reagierten verzögert.
-- Das Mikrofon funktionierte zeitweise nicht.
-- Headset und Audiogeräte wurden nicht immer korrekt erkannt.
-
-Ein Neustart des Systems führte nicht zu einer dauerhaften Verbesserung.
+- Anwendungen und Windows-Systemfenster wurden nur verzögert geöffnet.
+- Der Datei-Explorer reagierte zeitweise langsam.
+- Das Mikrofon funktionierte nicht zuverlässig.
+- Das Headset wurde zeitweise nicht korrekt erkannt.
+- Ein Neustart führte nicht zu einer dauerhaften Verbesserung.
 
 ---
 
@@ -36,163 +35,76 @@ Ein Neustart des Systems führte nicht zu einer dauerhaften Verbesserung.
 
 Die genaue Ursache konnte nicht eindeutig festgestellt werden.
 
-Die Symptome deuteten jedoch auf beschädigte oder fehlende Windows-Systemdateien hin.
+Probleme mit Mikrofonen, Headsets und anderen Audiogeräten können beispielsweise durch folgende Komponenten verursacht werden:
 
-Beschädigte Systemdateien können zu Leistungsproblemen, Fehlern bei der Geräteerkennung und einem instabilen Systemverhalten führen.
+- Gerätetreiber
+- Windows Audio Services
+- Windows-Updates
+- Geräte- oder Hardwarefehler
+- Datenschutzeinstellungen und Berechtigungen
+- beschädigte oder fehlende Windows-Systemdateien
 
----
+Aufgrund der allgemeinen Systeminstabilität wurde zunächst eine Beschädigung geschützter Windows-Systemdateien als mögliche Ursache untersucht.
 
-# 3. Lösung
-
-## Schritt 1: Eingabeaufforderung als Administrator öffnen
-
-Windows-Suche öffnen:
-
-```text
-cmd
-```
-
-Anschließend:
-
-```text
-Als Administrator ausführen
-```
+> **Hinweis:** Die spätere Verbesserung nach der Ausführung von SFC deutet darauf hin, dass beschädigte Systemdateien beteiligt gewesen sein könnten. Sie beweist jedoch nicht, dass sämtliche Symptome ausschließlich dadurch verursacht wurden.
 
 ---
 
-## Schritt 2: Systemdateien prüfen und reparieren
+# 3. Voraussetzungen
 
-Folgenden Befehl ausführen:
+Benötigt werden:
+
+- Lokale Administratorrechte
+- Zugriff auf Windows Terminal, PowerShell oder Eingabeaufforderung
+- Ausreichend Zeit für die vollständige Systemprüfung
+- Bei Verwendung von DISM eine funktionierende Netzwerkverbindung oder eine geeignete alternative Reparaturquelle
+
+Vor Beginn sollten geöffnete Dokumente und wichtige Arbeiten gespeichert werden.
+
+---
+
+# 4. Unterschied zwischen SFC und DISM
+
+## System File Checker
+
+Der System File Checker überprüft geschützte Windows-Systemdateien.
+
+Befehl:
 
 ```cmd
 sfc /scannow
 ```
 
-Der System File Checker (SFC) überprüft alle geschützten Windows-Systemdateien und ersetzt beschädigte Dateien automatisch durch eine funktionsfähige Kopie.
+Wenn beschädigte oder fehlende geschützte Systemdateien erkannt werden, versucht SFC, diese durch funktionsfähige Kopien aus dem Windows-Komponentenspeicher zu ersetzen.
 
----
+## Deployment Image Servicing and Management
 
-## Schritt 3: Scan abschließen lassen
+DISM überprüft und repariert den Windows-Komponentenspeicher, den SFC als Reparaturquelle verwenden kann.
 
-Warten bis der Scan:
-
-```text
-100 %
-```
-
-erreicht hat.
-
-Der Vorgang kann je nach System einige Zeit in Anspruch nehmen.
-
----
-
-## Schritt 4: Ergebnis prüfen
-
-Mögliche Ergebnisse:
-
-### Keine Integritätsverletzungen gefunden
-
-```text
-Der Windows-Ressourcenschutz hat keine Integritätsverletzungen gefunden.
-```
-
-### Beschädigte Dateien gefunden und erfolgreich repariert
-
-```text
-Der Windows-Ressourcenschutz hat beschädigte Dateien gefunden und erfolgreich repariert.
-```
-
-### Beschädigte Dateien konnten nicht repariert werden
-
-```text
-Der Windows-Ressourcenschutz hat beschädigte Dateien gefunden, einige davon konnten jedoch nicht repariert werden.
-```
-
-In diesem Fall sollte zusätzlich DISM ausgeführt werden.
-
----
-
-## Optional: DISM verwenden
-
-Falls SFC die Dateien nicht reparieren kann:
+Befehl:
 
 ```cmd
 DISM /Online /Cleanup-Image /RestoreHealth
 ```
 
-Nach Abschluss erneut ausführen:
+## Wann SFC verwenden?
 
-```cmd
-sfc /scannow
-```
+SFC eignet sich als erste Maßnahme, wenn vermutet wird, dass geschützte Windows-Systemdateien beschädigt oder nicht mehr vollständig vorhanden sind.
 
----
+Typische Beispiele:
 
-## Schritt 5: System neu starten
+- Windows-Komponenten reagieren ungewöhnlich.
+- Systemfenster oder integrierte Anwendungen funktionieren nicht korrekt.
+- Nach einem Update oder Treiberproblem treten Systemfehler auf.
+- Windows zeigt ein allgemein instabiles Verhalten.
 
-Nach erfolgreicher Reparatur:
+## Wann DISM verwenden?
 
-```cmd
-shutdown /r /t 0
-```
+DISM sollte verwendet werden, wenn:
 
-oder
+- SFC beschädigte Dateien nicht reparieren konnte.
+- SFC wiederholt Fehler meldet.
+- der Windows-Komponentenspeicher möglicherweise beschädigt ist.
+- ein professioneller vollständiger Reparaturdurchlauf durchgeführt werden soll.
 
-```text
-Windows normal neu starten
-```
-
----
-
-# 4. Kontrolle nach der Lösung
-
-Prüfen:
-
-- Windows reagiert wieder normal
-- Anwendungen starten fehlerfrei
-- Webseiten werden korrekt geladen
-- Mikrofon funktioniert wieder
-- Headset wird korrekt erkannt
-- Keine ungewöhnlichen Systemfehler mehr vorhanden
-
----
-
-# 5. Ergebnis
-
-Nach der Ausführung von:
-
-```cmd
-sfc /scannow
-```
-
-arbeitete das System wieder stabil.
-
-Die zuvor auftretenden Leistungsprobleme konnten nicht mehr festgestellt werden.
-
-Webseiten und Anwendungen wurden wieder korrekt geladen.
-
-Zusätzlich funktionierten Mikrofon und Headset wieder ordnungsgemäß.
-
----
-
-# 6. Was habe ich gelernt?
-
-- Windows-Systemdateien können beschädigt werden.
-- Beschädigte Systemdateien können Leistungs- und Treiberprobleme verursachen.
-- Mit `sfc /scannow` lassen sich Windows-Systemdateien prüfen und reparieren.
-- Bei schwerwiegenderen Problemen kann zusätzlich DISM verwendet werden.
-- Nach einer Reparatur sollte immer ein Funktionstest durchgeführt werden.
-
----
-
-## Autor
-
-Ahmad Javid Qarizadah
-
-Auszubildender Fachinformatiker für Systemintegration
-
----
-
-## Projekt
-
-Persönliche IT Knowledge Base während der Ausbildung zum Fachinformatiker für Systemintegration.
+Ein häufig verwend
