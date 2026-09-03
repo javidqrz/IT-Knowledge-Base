@@ -34,7 +34,6 @@ Während der Einrichtung trat zusätzlich der XRDP-Fehler
 
 ```text
 login failed for display 0
-
 ```
 auf, wodurch eine Remote-Anmeldung zunächst nicht möglich war.
 
