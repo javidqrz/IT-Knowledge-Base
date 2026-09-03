@@ -111,7 +111,7 @@ Als Administrator ausführen
 Unter:
 
 ```text
-Image File
+Image File (Raspberry-Pi-Referenz.img)
 ```
 
 Der folgende Screenshot zeigt die Auswahl der Image-Datei in Win32 Disk Imager.
