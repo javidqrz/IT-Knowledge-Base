@@ -62,6 +62,8 @@ Falls keine Anmeldung möglich ist:
 
 - Über Barrierefreiheit am Anmeldebildschirm aktivieren
 
+![Bildschirmtastatur](../Screenshots/Bildschirmtastatur.png)
+
 ## Registrierungseditor öffnen
 
 Öffnen:
