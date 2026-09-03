@@ -1,4 +1,4 @@
-# KB00009 – Windows-Systemdateien mit SFC reparieren
+# KB00007 – Windows-Systemdateien mit SFC reparieren
 
 ## Betroffene Systeme
 
