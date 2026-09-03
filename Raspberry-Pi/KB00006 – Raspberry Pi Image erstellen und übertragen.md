@@ -102,7 +102,7 @@ Als Administrator ausführen
 > Hier den Screenshot einfügen.
 
 
-![Win32 Imager](../Screenshots/Win32_Imager.png)
+![Win32 Imager](../Screenshots/win32_Imager.png)
 
 ---
 
