@@ -102,7 +102,7 @@ Als Administrator ausführen
 > Hier den Screenshot einfügen.
 
 ```markdown
-../Screenshots/Raspberry_Pi_Imaging.png
+../Screenshots/Win32_Imager.png
 ```
 
 ---
@@ -117,10 +117,8 @@ Image File
 
 einen Speicherort auswählen.
 
-Beispiel:
-
-```text
-Raspberry-Pi-Referenz.img
+```markdown
+../Screenshots/Data_auswählen.png
 ```
 
 ---
