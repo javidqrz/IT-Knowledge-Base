@@ -124,12 +124,7 @@ SynTP
 kbdclass
 
 ```
-
-Hinweis:
-
-- SynTP = Synaptics Touchpad Treiber
-
-- kbdclass = Standard Windows Tastaturtreiber
+![vmkbd3](../Screenshots/vmkbd3.png)
 
 ## REG_MULTI_SZ Fehler beheben
 
