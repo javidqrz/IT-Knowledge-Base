@@ -100,7 +100,7 @@ UpperFilters
 
 öffnen.
 
-![Registrierungseditor](../Registrierungseditor.png)
+![Registrierungseditor](../Screenshots/Registrierungseditor.png)
 
 ---
 
