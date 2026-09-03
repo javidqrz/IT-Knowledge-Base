@@ -101,9 +101,9 @@ Als Administrator ausführen
 
 > Hier den Screenshot einfügen.
 
-```markdown
+
 ../Screenshots/Win32_Imager.png
-```
+
 
 ---
 
@@ -117,9 +117,8 @@ Image File
 
 einen Speicherort auswählen.
 
-```markdown
 ../Screenshots/Data_auswählen.png
-```
+
 
 ---
 
