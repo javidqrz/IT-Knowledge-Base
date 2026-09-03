@@ -115,9 +115,9 @@ Unter:
 Image File
 ```
 
-einen Speicherort auswählen.
+Der folgende Screenshot zeigt die Auswahl der Image-Datei in Win32 Disk Imager.
 
-../Screenshots/Data_auswählen.png
+(../Screenshots/Data_auswählen.png)
 
 
 ---
