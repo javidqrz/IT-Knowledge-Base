@@ -104,7 +104,6 @@ Als Administrator ausführen
 
 ![Win32 Imager](../Screenshots/Win32_Imager.png)
 
-
 ---
 
 ## Schritt 5: Image-Datei auswählen
