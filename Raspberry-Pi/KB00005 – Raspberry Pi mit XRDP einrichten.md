@@ -24,9 +24,7 @@ Linux / Raspberry Pi / Installation / Remote Access
 
 Ein Raspberry Pi sollte für die spätere Nutzung im Unternehmensnetzwerk vorbereitet werden.
 
-Ziel war die Installation von Raspberry Pi OS sowie die Einrichtung des Systems für den zukünftigen Remotezugriff über XRDP.
-
-Dazu mussten das Betriebssystem installiert, das System aktualisiert, Benutzerkonten eingerichtet und die grundlegenden Systemeinstellungen vorgenommen werden.
+Ziel war die Installation von Raspberry Pi OS sowie die Einrichtung des Systems für den zukünftigen Remotezugriff über XRDP. Dazu mussten das Betriebssystem installiert, das System aktualisiert, Benutzerkonten eingerichtet und die grundlegenden Systemeinstellungen vorgenommen werden.
 
 Nach erfolgreicher Einrichtung sollte es möglich sein, sich jederzeit per Remote Desktop mit dem Raspberry Pi zu verbinden, ohne zusätzliche Konfigurationsarbeiten durchführen zu müssen.
 
