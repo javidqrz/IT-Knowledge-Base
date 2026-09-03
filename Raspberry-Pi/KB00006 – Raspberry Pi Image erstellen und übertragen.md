@@ -102,7 +102,7 @@ Als Administrator ausführen
 > Hier den Screenshot einfügen.
 
 
-../Screenshots/Win32_Imager.png
+![Win32 Imager](../Screenshots/Win32_Imager.png)
 
 
 ---
@@ -117,8 +117,7 @@ Image File
 
 Der folgende Screenshot zeigt die Auswahl der Image-Datei in Win32 Disk Imager.
 
-(../Screenshots/Data_auswählen.png)
-
+![Datei auswählen](../Screenshots/Data_auswählen.png)
 
 ---
 
