@@ -96,7 +96,6 @@ Den Schreibvorgang starten und vollständig abschließen lassen.
 
 ![Raspberry Pi Installation](../Screenshots/Raspberry_Pi_Installation.png)
 
-
 ---
 
 ## Schritt 2: Raspberry Pi starten
@@ -129,7 +128,6 @@ hostname
 ```bash
 hostname -I
 ```
-
 ---
 
 ## Schritt 4: System aktualisieren
@@ -151,7 +149,6 @@ System neu starten:
 ```bash
 sudo reboot
 ```
-
 ---
 
 ## Schritt 5: Benutzer verwalten
@@ -183,6 +180,9 @@ su - <benutzername>
 ---
 
 ## Schritt 6: Auto Login konfigurieren
+Bei aktiviertem Auto Login meldet sich der konfigurierte Benutzer nach dem Start des Raspberry Pi automatisch an.
+
+Es ist keine Eingabe von Benutzername oder Passwort erforderlich. Der Desktop wird direkt nach dem Systemstart geladen.
 
 ```bash
 sudo raspi-config
@@ -201,7 +201,9 @@ Anschließend:
 ```bash
 sudo reboot
 ```
-
+```text
+Hinweis: Aus Sicherheitsgründen sollte Auto Login nur auf Geräten verwendet werden, die sich in einer kontrollierten Umgebung befinden.
+```
 ---
 
 ## Schritt 7: XRDP installieren
