@@ -23,7 +23,7 @@ Das Windows-System reagierte ungewöhnlich langsam.
 
 Zusätzlich traten folgende Probleme auf:
 
-- Webseiten wurden teilweise nicht korrekt geöffnet.
+- Anwendungen und Systemfenster wurden teilweise nur verzögert geöffnet.
 - Anwendungen reagierten verzögert.
 - Das Mikrofon funktionierte zeitweise nicht.
 - Headset und Audiogeräte wurden nicht immer korrekt erkannt.
