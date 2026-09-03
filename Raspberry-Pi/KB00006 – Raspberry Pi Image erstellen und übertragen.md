@@ -168,6 +168,8 @@ anklicken.
 
 Das Image wird auf die neue microSD-Karte übertragen.
 
+![Image Übertragen](../Screenshots/Image_Übertragen.png)
+
 ---
 
 ## Schritt 9: Raspberry Pi starten
