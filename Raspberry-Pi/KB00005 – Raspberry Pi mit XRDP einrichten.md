@@ -116,7 +116,7 @@ Das System starten und die erste Anmeldung durchführen.
 ### Modell anzeigen
 
 ```bash
-tr -d '\0' < /proc/device-tree/model; echo
+cat /proc/device-tree/model
 ```
 
 ### Hostname anzeigen
