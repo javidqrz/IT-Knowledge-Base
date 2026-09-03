@@ -201,9 +201,9 @@ Anschließend:
 ```bash
 sudo reboot
 ```
-```text
+
 Hinweis: Aus Sicherheitsgründen sollte Auto Login nur auf Geräten verwendet werden, die sich in einer kontrollierten Umgebung befinden.
-```
+
 ---
 
 ## Schritt 7: XRDP installieren
